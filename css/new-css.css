@@ -1,0 +1,107 @@
+/* Propiedades de la sección agregada: Final Frontier */
+.hero-final-frontier {
+    width: 100%;
+    height: 960px; 
+    background-size: 1440px 960px;
+    background-repeat: no-repeat;
+    background-image: url(/images/final-frontier_large.jpg);
+    background-position: center;
+}
+
+/* Se anula propiedades del style.css que no permitia centrar la imagen */
+.hero-unit-moon-exploration .hero-image {
+  width: none;
+  height: none;
+  background-size: none;
+  background-repeat: none;
+  background-image: none;
+}
+
+/* Propiedades de la sección: Luna */
+.hero-unit-moon-exploration{
+  width: 100%;
+  height: 960px;
+  background-size: 1440px 960px;
+  background-repeat: no-repeat;
+  background-image: url(/images/luna_large.jpg);
+  background-position: center;
+}
+
+/* Propiedades del link de Final frontier */
+.link-me{
+  font-size: 20px;
+  color: rgb(25, 50, 131);
+  font-weight: bold;
+}
+
+.link-me:hover{
+  text-decoration: none;
+  color:rgb(40, 158, 158);
+}
+
+/* Propiedades de las targets de "The Timeline" */
+
+ .target{
+  display: grid;
+  grid-template-columns: repeat(1, 100%);
+  column-gap: 40px;
+}
+
+/* Propiedades de "The Gallery" */
+.gallery{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.moon-1,
+.moon-4,
+.moon-5,
+.moon-8,
+.moon-9{
+  width: 35%;
+}
+
+.moon-2,
+.moon-3,
+.moon-6,
+.moon-7,
+.moon-10{
+  width: 65%;
+}
+
+@media screen and (min-width: 1024px) {
+  .set-of-sections{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+  }
+
+   .target{
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: masonry;
+    /* Esta función sólo está implementada en Firefox, y se puede habilitar desde: 
+    1) about:config 
+    2)luego establecer el indicador layout.css.grid-template-masonry-value.enabled 
+    3) A continuación: true */
+    
+  }
+}
+
+@media screen and (max-width: 736px){
+    .gallery{
+    flex-direction: column;
+  }
+
+.moon-1,
+.moon-2,
+.moon-3,
+.moon-4,
+.moon-5,
+.moon-6,
+.moon-7,
+.moon-8,
+.moon-9,
+.moon-10{
+  width: 100%;
+}
+}
